@@ -7,25 +7,45 @@
   </head>
   <body>
     <nav>
-        <ul>
-          <li class="nav-li">My Personal Page</li>
+      <a class="nav-brand">My Personal Page</li>
+      <div class="nav-item">
+        <ul class="nav-ul">
+          <li class="nav-li"><a href="#home-section">Home</a></li>
+          <li class="nav-li"><a href="#about-section">About</a></li>
+          <li class="nav-li"><a href="#">Works</a></li>
+          <li class="nav-li"><a href="#">Contact</a></li>
         </ul>
+      </div>
     </nav>
-    <div><img class="image" src="photo.jpg" alt="photo">
-    </div>
-    <div>
-      <h2 class="heading">Yan-Rong-Chen</h2><br>
-      <p class="paragraph">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here' </p>
-    </div>
-    <div>
-      <ul class="info">
-        <li>Birthday <span class="li-text">1999-03-13</span></li>
-        <li>Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="li-text">21</span></li>
-        <li>Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="li-text">00-000-000-00</span></li>
-        <li>Address &nbsp;<span class="li-text">Hsinchu, ROC</span></li>
-      </ul>
-      
-    </div>
-    <button type="button" class="btn">DOWNLOAD CV</button>
+    <!--background-image: url('bg_1.jpg'); -->
+    <section id="home-section" class="cover" style="background-image: url('bg_2.jpg');">
+      <div class="container">
+        <h4 class="cover-text"></h4>
+        <h1 class="cover-text">
+          <span style="font-size: large; color: #78C2AD; margin-bottom: 5em;">HELLO</span><br>
+          I'm Yan-Rong Chen</h1>
+      </div>
+    </section>
+
+    <section id="about-section" class="section">
+      <div class="container">
+        <div><img class="image" src="myphoto.jpg" alt="photo">
+        </div>
+        <div>
+          <h2 class="heading">About Me</h2><br>
+          <p class="paragraph">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here' </p>
+        </div>
+        <div>
+          <ul class="info">
+            <li>Birthday <span class="li-text">1999-03-13</span></li>
+            <li>Age&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="li-text">21</span></li>
+            <li>Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="li-text">00-000-000-00</span></li>
+            <li>Address &nbsp;<span class="li-text">Hsinchu, ROC</span></li>
+          </ul>
+          
+        </div>
+        <button type="button" class="btn">DOWNLOAD CV</button>
+      </div>
+    </section>
   </body>
 </html>
