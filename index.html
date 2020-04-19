@@ -4,6 +4,9 @@
     <meta charset="utf-8">
     <title>my home</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
   </head>
   <body>
     <nav>
@@ -13,11 +16,10 @@
           <li class="nav-li"><a href="#home-section">Home</a></li>
           <li class="nav-li"><a href="#about-section">About</a></li>
           <li class="nav-li"><a href="#">Works</a></li>
-          <li class="nav-li"><a href="#">Contact</a></li>
+          <li class="nav-li"><a href="#contact-section">Contact</a></li>
         </ul>
       </div>
     </nav>
-    <!--background-image: url('bg_1.jpg'); -->
     <section id="home-section" class="cover" style="background-image: url('bg_2.jpg');">
       <div class="container">
         <h4 class="cover-text"></h4>
@@ -28,7 +30,7 @@
     </section>
 
     <section id="about-section" class="section">
-      <div class="container">
+      <div class="cover">
         <div><img class="image" src="myphoto.jpg" alt="photo">
         </div>
         <div>
@@ -47,5 +49,56 @@
         <button type="button" class="btn">DOWNLOAD CV</button>
       </div>
     </section>
+
+    <section id="contact-section" class="section">
+      <div class="cover">
+        <div>
+          <h2 class="heading" style="left: 10rem;">Get in Touch</h2><br>
+        </div>
+        <div class="form-group">
+          <form>
+            <input type="text" id="name" placeholder="Your Name">
+            <input type="email" id="email" placeholder="Your Email"><br>
+            <input type="text" id="subject" placeholder="Subject" style="width: 44em;"><br>
+            <textarea id="msg" rows="5" placeholder="Message" style="width: 44em;"></textarea>
+          </form>
+        </div>
+        <button type="button" id="btn" class="btn btn-form">Send Message</button>
+      </div>
+    </section>
   </body>
+
+  <script>
+    $(document).ready(function() {
+      $("#btn").click(function() {
+        if (!$("#name").val()) {
+          $("#name").css("border-color", "#FF0000");
+          $("#email").css("border-color", "rgb(39, 37, 37)");
+          $("#subject").css("border-color", "rgb(39, 37, 37)");
+          $("#msg").css("border-color", "rgb(39, 37, 37)");
+        } else if (!$("#email").val()) {
+          $("#email").css("border-color", "#FF0000");
+          $("#name").css("border-color", "rgb(39, 37, 37)");
+          $("#subject").css("border-color", "rgb(39, 37, 37)");
+          $("#msg").css("border-color", "rgb(39, 37, 37)");
+        } else if (!$("#subject").val()) {
+          $("#subject").css("border-color", "#FF0000");
+          $("#name").css("border-color", "rgb(39, 37, 37)");
+          $("#email").css("border-color", "rgb(39, 37, 37)");
+          $("#msg").css("border-color", "rgb(39, 37, 37)");
+        } else if (!$("#msg").val()) {
+          $("#msg").css("border-color", "#FF0000");
+          $("#name").css("border-color", "rgb(39, 37, 37)");
+          $("#email").css("border-color", "rgb(39, 37, 37)");
+          $("#subject").css("border-color", "rgb(39, 37, 37)");
+        } else {
+          $("#name").css("border-color", "rgb(39, 37, 37)").val(null);
+          $("#email").css("border-color", "rgb(39, 37, 37)").val(null);
+          $("#subject").css("border-color", "rgb(39, 37, 37)").val(null);
+          $("#msg").css("border-color", "rgb(39, 37, 37)").val(null);
+          alert("Success");
+        }
+      });
+    });
+  </script>
 </html>

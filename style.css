@@ -78,6 +78,10 @@ ul > li {
     
 }
 
+.nav-li:hover {
+    border-bottom: 3px solid #78C2AD;
+}
+
 .nav-ul {
     display: inline;
 }
@@ -184,9 +188,39 @@ ul > li {
 .cover-text {
     position: absolute;
     display: inline-block;
-    top: 10em;
+    top: 50%;
     left: 50%;
     font-size: xx-large;
     font-weight: bold;
     color: rgb(87, 65, 65);
+}
+
+.form-group{
+    position: absolute;
+    width: 50rem;
+    height: fit-content;
+    top: 7rem;
+    left: 13rem;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    margin: 1em 1em;
+    width: 20em;
+    border: 1px solid rgb(39, 37, 37);
+}
+
+.btn-form {
+    top: 28em;
+    left: 14rem;
+    background-color: #78C2AD;
+}
+
+.btn-form:hover {
+    cursor: pointer;
+    background-color: rgb(110, 170, 153);
+}
+
+.invalid {
+    border: 1px solid rgb(216, 83, 83);
 }
